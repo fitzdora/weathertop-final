@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title: 'Stationlist' /}
+
+#{menu id: "dashboard"/}
+
+<section class="ui raised segment">
+    <h4 class="ui header">${station.location} Weather Station</h4>
+    <div class="ui horizontal segments">
+        <div class="ui inverted segment">
+            <h3 class="ui green inverted header">${station.location}
+            </h3>
+        </div>
+        <div class="ui inverted segment">
+            <h4>Weather</h4>
+            <p>${conditions} </p>
+            <p>
+            </p>
+        </div>
+        <div class="ui inverted segment">
+            <h4>Temp</h4>
+            <p>${latestReading.tempC} C
+            </p>
+            <p>${f} F
+            </p>
+        </div>
+        <div class="ui inverted segment">
+            <h4>Wind</h4>
+            <p>${latestReading.windSpeed} bft
+            </p>
+        </div>
+        <div class="ui inverted segment">
+            <h4>Pressure</h4>
+            <p>${latestReading.pressure} hPa
+            </p>
+        </div>
+    </div>
+    #{weatherlist station:station /}
+    #{addreading station:station /}
+</section>

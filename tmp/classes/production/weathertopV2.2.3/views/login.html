@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+
+#{welcomemenu id:"login" /}
+
+<!--    This menu is added for sessions login - version release 2 -->
+<div class="ui two column middle aligned grid raised segment">
+    <div class="column">
+        <form class="ui stacked segment form" action="/authenticate" method="POST">
+            <h3 class="ui header">Log-in</h3>
+            <div class="field">
+                <label>Email</label> <label>
+                <input placeholder="Email" name="email">
+            </label>
+            </div>
+            <div class="field">
+                <label>Password</label> <label>
+                <input type="password" name="password">
+            </label>
+            </div>
+            <button class="ui blue submit button">Login</button>
+        </form>
+    </div>
+    <div class="column">
+        <img class="ui image" alt="image of rainbow over cottage" src="/public/images/rainbow.jpg">
+    </div>
+</div>

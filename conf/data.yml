@@ -1,0 +1,56 @@
+Reading(r1):
+  weatherCode: 800
+  tempC: 0.5
+  windSpeed: 3.5
+  windDirection: 220
+  pressure: 1001
+
+Reading(r2):
+  weatherCode: 600
+  tempC: 6.0
+  windSpeed: 2.0
+  windDirection: 200
+  pressure: 1004
+
+Reading(r3):
+  weatherCode: 700
+  tempC: 8.0
+  windSpeed: 1.0
+  windDirection: 250
+  pressure: 1000
+
+Reading(r4):
+  weatherCode: 200
+  tempC: 0.5
+  windSpeed: 3.5
+  windDirection: 340
+  pressure: 999
+
+Reading(r5):
+  weatherCode: 500
+  tempC: 9.5
+  windSpeed: 7.5
+  windDirection: 280
+  pressure: 988
+
+Station(s1):
+  location: Tramore
+  readings:
+    - r1
+    - r2
+
+Station(s2):
+  location: Dunmore
+  readings:
+    - r3
+    - r4
+    - r5
+
+Member(m1):
+  email: homer@simpson.com
+  password: secret
+  firstname: Homer
+  lastname: Simpson
+  stations:
+    - s1
+    - s2

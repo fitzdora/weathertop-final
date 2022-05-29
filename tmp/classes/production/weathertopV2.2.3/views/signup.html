@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+#{set title:'Signup' /}
+
+#{welcomemenu id:"signup" /}
+
+<!--    This menu is added for sessions signup - version release 2 -->
+
+<div class="ui two column grid basic middle aligned raised segment">
+    <div class="column">
+        <form class="ui stacked segment form" action="/register" method="POST">
+            <h3 class="ui header">Register</h3>
+            <div class="two fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <label>
+                        <input placeholder="First Name" type="text" name="firstname">
+                    </label>
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <label>
+                        <input placeholder="Last Name" type="text" name="lastname">
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <label>
+                    <input placeholder="Email" type="text" name="email">
+                </label>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <label>
+                    <input type="password" name="password">
+                </label>
+            </div>
+            <button class="ui blue submit button">Submit</button>
+        </form>
+    </div>
+    <div class="column">
+        <img class="ui image" alt="Image is of lightning strike over town at night" src="/public/images/lightning.jpg">
+    </div>
+</div>

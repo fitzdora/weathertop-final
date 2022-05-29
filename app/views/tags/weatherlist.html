@@ -1,0 +1,39 @@
+<section class="ui raised segment">
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>Weather Code</th>
+            <th>Temp</th>
+            <th>Wind Speed</th>
+            <th>Wind Direction</th>
+            <th>Pressure</th>
+        </tr>
+        </thead>
+        <tbody>
+        #{list items:_station.readings, as: 'reading'}
+        <tr>
+            <td>
+                ${reading.weatherCode}
+            </td>
+            <td>
+                ${reading.tempC}
+            </td>
+            <td>
+                ${reading.windSpeed}
+            </td>
+            <td>
+                ${reading.windDirection}
+            </td>
+            <td>
+                ${reading.pressure}
+            </td>
+            <td>
+                <a href="/stations/${_station.id}/deletereading/${reading.id}" class="ui icon button">
+                    <i class="icon trash"></i>
+                </a>
+            </td>
+        </tr>
+        #{/list}
+        </tbody>
+    </table>
+</section>
